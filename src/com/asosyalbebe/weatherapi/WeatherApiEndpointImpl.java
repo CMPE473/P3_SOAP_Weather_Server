@@ -1,10 +1,13 @@
 package com.asosyalbebe.weatherapi;
 
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
+import javax.annotation.PostConstruct;
 import javax.jws.WebService;
+
+import org.apache.log4j.Logger;
+
+import com.asosyalbebe.weatherapi.service.WeatherService;
 
 /**
  * Implementation of the WeatherApi endpoint.
@@ -15,17 +18,19 @@ import javax.jws.WebService;
 @WebService(endpointInterface = "com.asosyalbebe.weatherapi.WeatherApiEndpoint")
 public class WeatherApiEndpointImpl implements WeatherApiEndpoint {
 
+	private WeatherService weatherService;
+	private Logger log = Logger.getLogger(getClass());
+
+	@PostConstruct
+	public void init() {
+		weatherService = new WeatherService();
+		log.info("WeatherApiEndpointImpl created!");
+	}
+
 	@Override
 	public List<Weather> getWeather(String city) {
-		List<Weather> list = new ArrayList<Weather>();
-		Weather w = new Weather();
-		w.setLow(0d);
-		w.setHigh(1d);
-		w.setDate(new Date());
-		w.setIcon("Rain");
-		w.setIconPath("http://icons.wxug.com/i/c/k/rain.gif");
-		list.add(w);
-		return list;
+		log.info("getting forecast for " + city);
+		return weatherService.getForecast(city);
 	}
 
 }
