@@ -112,6 +112,7 @@ public class WeatherService {
 
 	@SuppressWarnings("deprecation")
 	private String urlEncode(String param) {
+		param = param.replace(' ', '_');
 		try {
 			return URLEncoder.encode(param, "UTF-8");
 		} catch (UnsupportedEncodingException e) {

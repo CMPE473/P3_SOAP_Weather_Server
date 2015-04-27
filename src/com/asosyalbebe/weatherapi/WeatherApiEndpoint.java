@@ -3,6 +3,7 @@ package com.asosyalbebe.weatherapi;
 import java.util.List;
 
 import javax.jws.WebMethod;
+import javax.jws.WebParam;
 import javax.jws.WebService;
 import javax.jws.soap.SOAPBinding;
 import javax.jws.soap.SOAPBinding.Style;
@@ -19,6 +20,6 @@ import javax.jws.soap.SOAPBinding.Use;
 public interface WeatherApiEndpoint {
 
 	@WebMethod(action = "GetWeather")
-	public List<Weather> getWeather(String city);
+	public List<Weather> getWeather(@WebParam(name = "city") String city);
 
 }

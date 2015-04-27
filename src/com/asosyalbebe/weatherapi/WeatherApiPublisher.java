@@ -11,5 +11,7 @@ import javax.xml.ws.Endpoint;
 public class WeatherApiPublisher {
 	public static void main(String[] args) {
 		Endpoint.publish("http://localhost:9999/ws/weatherapi", new WeatherApiEndpointImpl());
+		// Endpoint.publish("http://188.226.187.211:9999/ws/weatherapi", new
+		// WeatherApiEndpointImpl());
 	}
 }

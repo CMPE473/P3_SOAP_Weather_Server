@@ -1,4 +1,3 @@
-
 package com.asosyalbebe.weatherapi.jaxws;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -12,25 +11,23 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "getWeather", namespace = "http://weatherapi.asosyalbebe.com/")
 public class GetWeather {
 
-    @XmlElement(name = "arg0", namespace = "")
-    private String arg0;
+	@XmlElement(name = "city", namespace = "")
+	private String city;
 
-    /**
-     * 
-     * @return
-     *     returns String
-     */
-    public String getArg0() {
-        return this.arg0;
-    }
+	/**
+	 * 
+	 * @return returns String
+	 */
+	public String getCity() {
+		return this.city;
+	}
 
-    /**
-     * 
-     * @param arg0
-     *     the value for the arg0 property
-     */
-    public void setArg0(String arg0) {
-        this.arg0 = arg0;
-    }
+	/**
+	 * 
+	 * @param arg0 the value for the arg0 property
+	 */
+	public void setCity(String city) {
+		this.city = city;
+	}
 
 }
