@@ -2,7 +2,7 @@
 .metadata
 .gradle
 bin/
-target/
+target/**
 tmp/
 *.tmp
 *.bak

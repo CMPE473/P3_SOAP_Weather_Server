@@ -1,8 +1,0 @@
-com\asosyalbebe\weatherapi\Weather.class
-com\asosyalbebe\weatherapi\WeatherApiEndpointImpl.class
-com\asosyalbebe\weatherapi\jaxws\GetWeatherResponse.class
-com\asosyalbebe\weatherapi\service\WeatherService.class
-com\asosyalbebe\weatherapi\WeatherApiEndpoint.class
-com\asosyalbebe\weatherapi\test\TestClient.class
-com\asosyalbebe\weatherapi\jaxws\GetWeather.class
-com\asosyalbebe\weatherapi\WeatherApiPublisher.class
